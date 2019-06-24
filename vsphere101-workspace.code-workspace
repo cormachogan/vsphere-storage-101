@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "PV-PVC-POD"
+		},
+		{
+			"path": "ReadWriteMany"
+		}
+	],
+	"settings": {}
+}

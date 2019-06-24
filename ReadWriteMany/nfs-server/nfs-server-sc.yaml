@@ -1,0 +1,10 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: nfs-sc
+provisioner: kubernetes.io/vsphere-volume
+# Assumption is that volume is provisioned on vSAN datastore and that storage policy called raid-1 already exists
+parameters:
+    diskformat: thin
+    storagePolicyName: raid-1
+    datastore: vsanDatastore

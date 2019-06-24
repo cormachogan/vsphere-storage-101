@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nfs-client-pod-1
+spec:
+  containers:
+  - name: busybox
+    image: "k8s.gr.io/busybox"
+    volumeMounts:
+    - name: nfs-vol
+      mountPath: "/nfs"
+    command: [ "sleep", "1000000" ]
+  volumes:
+    - name: nfs-vol
+      persistentVolumeClaim:
+        claimName: nfs-client-pvc

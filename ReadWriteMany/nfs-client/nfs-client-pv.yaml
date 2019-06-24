@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-client-pv
+spec:
+  storageClassName: nfs-client-sc
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+  # server IP address needs to be adjusted to match the clusterIP address of the service
+    server: "10.100.200.243"
+    path: "/exports"

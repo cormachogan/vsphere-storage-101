@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: demo-pv
+spec:
+  storageClassName: demo
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  # Assumption is that this volume has been created using vSphere CLI tool (e.g. vmkfstools)
+  vsphereVolume:
+    volumePath: "[vsanDatastore] demo/demo.vmdk"
+    fsType: ext4

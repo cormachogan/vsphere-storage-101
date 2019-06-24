@@ -1,0 +1,9 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: demo-sc-vsan
+provisioner: kubernetes.io/vsphere-volume
+# Assumption is that vSAN is providing underling datastore and a storage policy called gold has already been created in vSphere
+parameters:
+  storagePolicyName: gold
+  datastore: vsanDatastore

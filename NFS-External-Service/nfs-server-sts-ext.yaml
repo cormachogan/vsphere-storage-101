@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: nfs-server-ext
+  namespace: nfs
+  labels:
+    app: nfs-server-ext
+spec:
+  serviceName: nfs-service-svc-ext
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nfs-server-ext
+  template:
+    metadata:
+      labels:
+        app: nfs-server-ext
+    spec:
+      containers:
+      - name: nfs-server-ext
+        image: gcr.io/google_samples/volume-nfs:0.8
+        ports:
+          - name: nfs
+            containerPort: 2049
+          - name: mountd
+            containerPort: 20048
+          - name: rpcbind
+            containerPort: 111
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - name: nfs-export
+          mountPath: /exports
+  volumeClaimTemplates:
+  - metadata:
+      name: nfs-export
+      annotations:
+        volume.beta.kubernetes.io/storage-class: nfs-sc
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 5Gi

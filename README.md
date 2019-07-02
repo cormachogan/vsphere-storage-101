@@ -17,3 +17,5 @@ I wrote a series of blog posts which attempted to cover many basic aspects of ru
 <A HREF="https://cormachogan.com/2019/06/20/kubernetes-storage-on-vsphere-101-readwritemany-nfs/">6. ReadWriteMany Volumes (e.g. NFS)</A>. Link to manifest files  <A HREF="https://github.com/cormachogan/vsphere-storage-101/tree/master/ReadWriteMany">here.</A>
 
 <A HREF="https://cormachogan.com/2019/06/27/kubernetes-storage-on-vsphere-101-nfs-revisted/">7. NFS Revisited</A>. Link to manifest files  <A HREF="https://github.com/cormachogan/vsphere-storage-101/tree/master/NFS-External-Service">here.</A>
+
+<A HREF="https://cormachogan.com/2019/06/27/kubernetes-on-vsphere-101-services/">8. Services</A>. Link to manifest files  <A HREF="https://github.com/cormachogan/vsphere-storage-101/tree/master/Services">here.</A>

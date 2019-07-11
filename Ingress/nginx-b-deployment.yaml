@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-b-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nginx-b
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx-b
+    spec:
+      containers:
+      - name: nginx-b
+        image: harbor.rainpole.com/library/nginx-b:latest
+        ports:
+        - containerPort: 80

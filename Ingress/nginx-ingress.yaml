@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nginx
+spec:
+  rules:
+  - host: nginx.rainpole.com
+    http:
+      paths:
+      - path: /index-a.html # This page must exist on the A server
+        backend:
+          serviceName: nginx-a
+          servicePort: 80
+      - path: /index-b.html # This page must exist on the B server
+        backend:
+          serviceName: nginx-b
+          servicePort: 80
+          

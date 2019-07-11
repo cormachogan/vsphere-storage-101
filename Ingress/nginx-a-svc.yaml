@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: nginx-a
+  name: nginx-a
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    app: nginx-a
+  sessionAffinity: None
+  type: ClusterIP

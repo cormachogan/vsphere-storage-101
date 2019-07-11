@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-a-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nginx-a
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx-a
+    spec:
+      containers:
+      - name: nginx-a
+        image: harbor.rainpole.com/library/nginx-a:latest
+        ports:
+        - containerPort: 80

@@ -1,4 +1,4 @@
-# PNFS Revisited Manifests for vsphere-storage-101 blogs
+# NFS Revisited Manifests for vsphere-storage-101 blogs
 
 These are the manifests used for the NFS Revisited (external service)  demo.
 

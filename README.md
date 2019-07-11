@@ -20,4 +20,4 @@ I wrote a series of blog posts which attempted to cover many basic aspects of ru
 
 <A HREF="https://cormachogan.com/2019/06/27/kubernetes-on-vsphere-101-services/">8. Services</A>. Link to manifest files  <A HREF="https://github.com/cormachogan/vsphere-storage-101/tree/master/Services">here.</A>
 
-<A HREF="https://cormachogan.com/2019/07/11/kubernetes-on-vsphere-101-ingress/">9. SerIngressvices</A>. Link to manifest files  <A HREF="https://github.com/cormachogan/vsphere-storage-101/tree/master/Ingress">here.</A>
+<A HREF="https://cormachogan.com/2019/07/11/kubernetes-on-vsphere-101-ingress/">9. Ingress</A>. Link to manifest files  <A HREF="https://github.com/cormachogan/vsphere-storage-101/tree/master/Ingress">here.</A>
